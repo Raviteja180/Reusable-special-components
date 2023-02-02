@@ -13,7 +13,7 @@ function Link({to,children,className,activeClassName}){
     if (e.metaKey || e.ctrlKey){
         return;
     }
-        console.log(e)
+        // console.log(e)
         e.preventDefault();
         navigate(to);
     }

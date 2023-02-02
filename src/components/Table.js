@@ -1,9 +1,15 @@
 import { FaColumns } from "react-icons/fa"
+import { Fragment } from "react"
 
 function Table({data,config,keyFn}){
     const renderedHeaders = config.map((column)=>{
-        return <th className="p-2" key={column.label}>{column.label}
-
+        if (column.header){
+            return <Fragment key={column.label}>{  column.header()}</Fragment>
+        }
+        return <th 
+        className="p-2" 
+        key={column.label}>
+            {column.label}
         </th>
     })
     const renderedRows = data.map((rowData)=>{

@@ -3,7 +3,6 @@
 import className from 'classnames';
 
 const finalClassName = className('px-3','py-1.5','border bg-blu');
-console.log(finalClassName);
 function Button({children,
     primary,
     secondary,
