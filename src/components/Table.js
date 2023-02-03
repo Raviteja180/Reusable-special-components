@@ -2,6 +2,7 @@ import { FaColumns } from "react-icons/fa"
 import { Fragment } from "react"
 
 function Table({data,config,keyFn}){
+    console.log("table.js",data);
     const renderedHeaders = config.map((column)=>{
         if (column.header){
             return <Fragment key={column.label}>{  column.header()}</Fragment>
